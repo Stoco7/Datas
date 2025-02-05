@@ -30,5 +30,26 @@ namespace Datas
             textBoxFinal2.Text = monthCalendar1.SelectionEnd.ToShortDateString();
             textBoxAtual2.Text = monthCalendar1.TodayDate.ToShortDateString();
         }
+
+        private void MenuNotificacao_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void MenuNotificacao_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            if (e.ClickedItem.Name.ToString() == "Fechar")
+            {
+                this.Close();
+            }
+            else if (e.ClickedItem.Name.ToString() == "Restaurar")
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else if (e.ClickedItem.Name.ToString() == "Mensagem")
+            {
+                MessageBox.Show("VOCE ESTA LENDO ESSA MENSAGEM!");
+            }
+        }
     }
 }

@@ -199,6 +199,7 @@
             // 
             // calendarioIcone
             // 
+            this.calendarioIcone.ContextMenuStrip = this.MenuNotificacao;
             this.calendarioIcone.Icon = ((System.Drawing.Icon)(resources.GetObject("calendarioIcone.Icon")));
             this.calendarioIcone.Text = "CalendarioIcone";
             this.calendarioIcone.Visible = true;
@@ -211,6 +212,9 @@
             this.Fechar});
             this.MenuNotificacao.Name = "MenuNotificacao";
             this.MenuNotificacao.Size = new System.Drawing.Size(181, 92);
+            this.MenuNotificacao.Opening += new System.ComponentModel.CancelEventHandler(this.MenuNotificacao_Opening);
+            this.MenuNotificacao.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuNotificacao_ItemClicked);
+            
             // 
             // Restaurar
             // 
